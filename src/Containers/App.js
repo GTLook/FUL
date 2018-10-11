@@ -5,7 +5,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import { request, AuthenticationService } from '../Helpers'
 
-//import Home from './Home'
+import Footer from '../Components/Footer'
+import Nav from '../Components/Navbar'
+import Home from './Home'
 
 //CSS
 import '../CSS/App.css';
@@ -14,15 +16,17 @@ class App extends Component {
   render(){
     return (
       <div>
+        <Nav />
         <BrowserRouter>
           <div>
             <Switch>
               {
-                //<Route exact path='/' component={ Home } />
+                <Route exact path='/' component={ Home } />
               }
             </Switch>
           </div>
         </BrowserRouter>
+        <Footer />
       </div>
     )
   }
